@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODULE 5 | PRACTICAL</title>
+  <style>
+    
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #5372ff, #9d57e3);
+      color: #fff;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      animation: slideDown 0.8s ease;
+    }
+
+    input {
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      width: 240px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    button {
+      margin-left: 8px;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      background: #ffffff;
+      color: #764ba2;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      background: #f0f0f0;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      width: 300px;
+    }
+
+    li {
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 10px 14px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: popIn 0.4s ease;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    li:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: scale(1.02);
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: #ddd;
+      opacity: 0.7;
+      animation: strike 0.3s ease;
+    }
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes strike {
+      from { opacity: 1; }
+      to { opacity: 0.7; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="heading">Type something...</h1>
+
+  <input type="text" id="textInput" placeholder="Enter text" />
+
+  <button id="addBtn">Add</button>
+  <button id="clearAllBtn">Clear All</button>
+
+  <p>Total items: <span id="count">0</span></p>
+
+  <ul id="list"></ul>
+
+  <script src="script.js"></script>
+    
+</body>
+</html>
